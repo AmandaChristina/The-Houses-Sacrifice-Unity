@@ -14,8 +14,6 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-
-        //canvaManager = GameObject.Find("Canvas").GetComponent<HUDManager>();
         canvaManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<HUDManager>();
     }
 
@@ -27,6 +25,7 @@ public class PlayerControl : MonoBehaviour
         Collider2D collision = Physics2D.OverlapCircle(transform.position, radius);
         Move();
         Interative(collision);
+        PushCamera(collision);
     }
 
     void Move()
@@ -54,9 +53,20 @@ public class PlayerControl : MonoBehaviour
         else canvaManager.DisplayInterative(" ", " ");
     }
 
+    void PushCamera(Collider2D col)
+    {
+        if (col.transform.tag == "CamTrigger" && col != null)
+        {
+            CameraController camScript = col.GetComponent<CameraController>();
+            camScript.CameraMove();
+
+        }
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(this.transform.position, radius);
 
     }
+
 }

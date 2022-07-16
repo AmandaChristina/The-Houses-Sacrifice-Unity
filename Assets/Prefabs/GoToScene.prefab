@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9051553694788796398}
   - component: {fileID: 1265365523}
   - component: {fileID: 1265365520}
-  m_Layer: 12
-  m_Name: Door
-  m_TagString: Untagged
+  - component: {fileID: 5649210120659809083}
+  m_Layer: 0
+  m_Name: GoToScene
+  m_TagString: Interative
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 99
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.38679248, g: 0.20593823, b: 0.14413494, a: 1}
+  m_Color: {r: 0.30113026, g: 0.6320754, b: 0.36359903, a: 0.40392157}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,3 +123,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c2cc647b6b55f4892dfdf4d4fa8b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneRun: 
+--- !u!114 &5649210120659809083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9051553694788796401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d3cf78cc3e14e4889cba7b6994aa04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionObj: 'Aperte " E " '
+  nameObj: Porta

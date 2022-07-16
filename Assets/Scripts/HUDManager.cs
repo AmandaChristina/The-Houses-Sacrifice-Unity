@@ -5,10 +5,15 @@ using TMPro;
 
 public class HUDManager : MonoBehaviour
 {
-   public TMP_Text nameObj;
-   public TMP_Text descriptionObj;
+    TMP_Text nameObj;
+    TMP_Text descriptionObj;
 
-    
+    void Start()
+    {
+        nameObj = GameObject.Find("NameText").GetComponent<TMP_Text>();
+        descriptionObj = GameObject.Find("DescriptionText").GetComponent<TMP_Text>();
+        
+    }
     public void DisplayInterative(string nameObj, string descriptionObj)
     {
         //This referência a variável global; 

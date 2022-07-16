@@ -18,10 +18,10 @@ public class Interative : MonoBehaviour
 
     public void ExecuteInterative()
     {
-        if(this.nameObj == "Door")
+        if(gameObject.name == "GoToScene")
         {
-            Door doorScript = GetComponent<Door>();
-            doorScript.RunnerScene();
+            GoToScene gotosceneScript = GetComponent<GoToScene>();
+            gotosceneScript.RunnerScene();
         }
     }
 }

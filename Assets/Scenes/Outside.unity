@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 173471162}
   - component: {fileID: 173471164}
   - component: {fileID: 173471163}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Parede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 219083250}
   - component: {fileID: 219083252}
   - component: {fileID: 219083251}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Parede (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 749808661}
   - component: {fileID: 749808663}
   - component: {fileID: 749808662}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Parede (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,25 +599,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1265365519 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9051553694788796401, guid: 18c3751c5de08cc4b84efd4a8a1b41bc, type: 3}
-  m_PrefabInstance: {fileID: 9051553693797273086}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1265365520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265365519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8d3cf78cc3e14e4889cba7b6994aa04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  descriptionObj: Aperte "E" para entrar!
-  nameObj: Door
 --- !u!1 &1656377041
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +610,7 @@ GameObject:
   - component: {fileID: 1656377042}
   - component: {fileID: 1656377044}
   - component: {fileID: 1656377043}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Parede (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819388857}
   - component: {fileID: 1819388856}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +945,7 @@ GameObject:
   - component: {fileID: 1942486482}
   - component: {fileID: 1942486484}
   - component: {fileID: 1942486483}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Parede (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,6 +1115,10 @@ PrefabInstance:
       propertyPath: sceneRun
       value: Main_Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 5649210120659809083, guid: 18c3751c5de08cc4b84efd4a8a1b41bc, type: 3}
+      propertyPath: descriptionObj
+      value: Aperte " E " para entrar em casa
+      objectReference: {fileID: 0}
     - target: {fileID: 9051553694788796398, guid: 18c3751c5de08cc4b84efd4a8a1b41bc, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -1192,7 +1177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9051553694788796401, guid: 18c3751c5de08cc4b84efd4a8a1b41bc, type: 3}
       propertyPath: m_Name
-      value: Door
+      value: GoToScene
       objectReference: {fileID: 0}
     - target: {fileID: 9051553694788796401, guid: 18c3751c5de08cc4b84efd4a8a1b41bc, type: 3}
       propertyPath: m_Layer

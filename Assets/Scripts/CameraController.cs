@@ -4,32 +4,22 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    GameObject cameraObj;
-    //1 = up
-    //2 = down
-    //3 = right
-    //4 = left
-    [SerializeField]
-    int lado;
-
+   GameObject cameraObj;
+   ManagerScene managerScript;
+  
     void Start()
     {
         cameraObj = GameObject.Find("Main Camera");
+        managerScript = GameObject.Find("SceneManagement").GetComponent<ManagerScene>();
     }
 
 
-    void Update()
+    public void CameraMove(Transform room)
     {
-        
-    }
+        float limitX = Mathf.Clamp(room.position.x, managerScript.limitXMin, managerScript.limitXMax);
+        float limitY = Mathf.Clamp(room.position.y, managerScript.limitYMin, managerScript.limitYMax);
 
-    public void CameraMove()
-    {
-        Vector3 posCamera = cameraObj.transform.position;
-
-        if (this.lado == 1) { posCamera = Vector3.Lerp(posCamera, posCamera + Vector3.up*2, 3f); }
-        else if (this.lado == 2) { }
-        else if (this.lado == 3) { }
-        else if (this.lado == 4) { }
+        Vector3 newPos = new Vector3(limitX, limitY, cameraObj.transform.position.z);
+        cameraObj.transform.position = Vector3.Lerp(cameraObj.transform.position, newPos, Time.deltaTime * 1f);
     }
 }

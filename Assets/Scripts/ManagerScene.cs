@@ -6,6 +6,8 @@ public class ManagerScene : MonoBehaviour
 {
    [SerializeField]
    GameObject playerObj,canvasObj;
+   [SerializeField]
+   public float limitXMin, limitYMin, limitXMax, limitYMax;
 
     void Awake()
     {
@@ -18,6 +20,8 @@ public class ManagerScene : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         Instantiate(playerObj);
     }
+
+    
 
    
 }

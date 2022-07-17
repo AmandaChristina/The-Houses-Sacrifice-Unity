@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     HUDManager canvaManager;
 
+
     [SerializeField]
     float speed = 5f;
     [SerializeField]
@@ -26,6 +27,8 @@ public class PlayerControl : MonoBehaviour
         Move();
         Interative(collision);
         PushCamera(collision);
+        
+
     }
 
     void Move()
@@ -55,10 +58,12 @@ public class PlayerControl : MonoBehaviour
 
     void PushCamera(Collider2D col)
     {
-        if (col.transform.tag == "CamTrigger" && col != null)
+        if ( col != null && col.transform.tag == "room")
         {
             CameraController camScript = col.GetComponent<CameraController>();
-            camScript.CameraMove();
+            //if(camScript != null) print("peguei aquela gorda");
+            camScript.CameraMove(col.transform);
+            //print(col.gameObject.name);
 
         }
     }
